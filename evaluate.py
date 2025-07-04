@@ -58,7 +58,7 @@ def main():
 
     try:
         system_message = get_system_message(template_letter)
-        client = OpenAI(api_key="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")
+        client = OpenAI(api_key="sk-pro...")
 
         response = client.chat.completions.create(
             model="ft:gpt-3.5-turbo-0125:agencija-arbeiter::Bp3LTe8m",
