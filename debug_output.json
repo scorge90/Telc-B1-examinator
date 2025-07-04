@@ -1,0 +1,52 @@
+{
+  "corrected_text": "Liebe Anna,\ngib mir Geld, ich muss ein Auto für meine Mutter kaufen.\nDanke sehr.\nLiebe Grüße,\nDavid.",
+  "comments": [
+    {
+      "original": "Gled",
+      "corrected": "Geld",
+      "comment": "Rechtschreibfehler, das richtige Wort ist 'Geld'."
+    },
+    {
+      "original": "kaufen eine Auto",
+      "corrected": "ein Auto kaufen",
+      "comment": "Die Wortstellung ist falsch. Im Deutschen steht das Verb am Ende des Satzes."
+    },
+    {
+      "original": "fur",
+      "corrected": "für",
+      "comment": "Rechtschreibfehler, das richtige Wort ist 'für'."
+    },
+    {
+      "original": "Muter",
+      "corrected": "Mutter",
+      "comment": "Rechtschreibfehler, das richtige Wort ist 'Mutter'."
+    },
+    {
+      "original": "Liebe Gurse",
+      "corrected": "Liebe Grüße,",
+      "comment": "Falsche Grußformel. Es sollte 'Liebe Grüße,' sein."
+    }
+  ],
+  "grades": {
+    "Grammatik": {
+      "note": 5,
+      "kommentar": "Es gibt einige grammatische Fehler, insbesondere bei der Wortstellung und der Verwendung von Artikeln."
+    },
+    "Wortschatz": {
+      "note": 6,
+      "kommentar": "Der Wortschatz ist einfach, aber es gibt einige Fehler in der Rechtschreibung."
+    },
+    "Stil": {
+      "note": 5,
+      "kommentar": "Der Stil ist sehr einfach und könnte verbessert werden, um flüssiger zu sein."
+    },
+    "Inhalt": {
+      "note": 6,
+      "kommentar": "Der Inhalt ist klar, aber sehr kurz und könnte mehr Details enthalten."
+    },
+    "Gesamtnote": {
+      "note": 5.4,
+      "kommentar": "Der Brief hat einige Fehler, aber die Hauptbotschaft ist verständlich."
+    }
+  }
+}

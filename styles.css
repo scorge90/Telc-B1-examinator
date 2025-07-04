@@ -1,0 +1,288 @@
+/* ===== Base Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Global Styles ===== */
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  color: #222;
+  line-height: 1.8;
+  padding: 3rem;
+  font-size: 1.6rem; /* ⬆️ Increased base font size */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Container ===== */
+.container {
+  background: rgba(113, 219, 64, 0);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  max-width: 1500px;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3 {
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem; /* ⬆️ */
+}
+
+h2 {
+  font-size: 2rem; /* ⬆️ */
+}
+
+h3 {
+  font-size: 1.5rem; /* ⬆️ */
+}
+
+/* ===== Typography & Inputs ===== */
+label {
+  display: block;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem; /* ⬆️ */
+}
+
+textarea,
+select,
+button,
+input[type="submit"] {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1.7rem; /* ⬆️ */
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  transition: all 0.25s ease;
+}
+
+textarea {
+  min-height: 520px;
+  resize: vertical;
+}
+
+select {
+  background-color: #f8f8f8;
+}
+
+textarea:focus,
+select:focus,
+input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* ===== Buttons ===== */
+button,
+input[type="submit"] {
+  background: #3b82f6;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #2563eb;
+}
+
+/* ===== Messages ===== */
+.message {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  font-weight: 500;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.message.error {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+
+.message.success {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+
+/* ===== Results Section ===== */
+.result {
+  background: #849cb3;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px #e5e7eb;
+  font-size: 1.2rem;
+}
+
+/* ===== Correction Boxes ===== */
+.corrected-box,
+.grade-box {
+  background: #f1f5f9;
+  border-left: 6px solid #3b82f6;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+.corrected-box h3,
+.grade-box h3 {
+  margin-bottom: 0.8rem;
+  color: #1e293b;
+  font-size: 1.4rem;
+}
+
+/* ===== Highlight Texts ===== */
+.original {
+  color: #dc2626;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.corrected {
+  color: #16a34a;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.comment {
+  color: #2563eb;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+/* ===== Letter Preview ===== */
+.letter-box {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-size: 1.2rem;
+}
+
+.letter-box pre {
+  background: #f3f4f6;
+  padding: 1.5rem;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  font-size: 1.15rem;
+}
+
+/* ===== Upload / Dropdown ===== */
+#upload-area {
+  border: 2px dashed #3b82f6;
+  background: #e0f2fe;
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+  color: #1e3a8a;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+#upload-area:hover {
+  background: #bae6fd;
+}
+
+select[name="selected_letter"] {
+  margin-bottom: 1.8rem;
+}
+
+/* ===== Loading Spinner ===== */
+#loading {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.spinner {
+  width: 70px;
+  height: 70px;
+  border: 6px solid #eee;
+  border-top: 6px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  textarea, button, select {
+    font-size: 1.1rem;
+  }
+
+  .letter-box pre {
+    font-size: 1.05rem;
+  }
+}
+#wordCountDisplay{
+    font-size: 2rem;
+  }
+/* Ensure full width for all main containers */
+form {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
